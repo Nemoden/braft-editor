@@ -28,6 +28,10 @@ export interface BraftEditorProps {
     | 'zh'
     | 'zh-hant'
     | 'en'
+    | 'tr'
+    | 'ru'
+    | 'jpn'
+    | 'kr'
     | 'pl'
     | ((languages: any, context: any) => any);
   controls?: ControlType[];
@@ -36,6 +40,7 @@ export interface BraftEditorProps {
   componentBelowControlBar?: React.ReactNode;
   media?: MediaType;
   imageControls?: ImageControlType[];
+  imageResizable?: boolean;
   headings?: string[];
   colors?: string[];
   fontSizes?: number[];
@@ -47,10 +52,11 @@ export interface BraftEditorProps {
   draftProps?: DraftEditorProps;
   blockRenderMap?: Immutable.Map<any, any> | Function;
   blockRendererFn?: Function;
-  handlePastedText?: Function;
   converts?: object;
   hooks?: HooksType;
   textBackgroundColor?: boolean;
+  allowInsertLinkText?: boolean;
+  defaultLinkTarget?: string;
   stripPastedStyles?: boolean;
   fixPlaceholder?: boolean;
   className?: string;
@@ -65,6 +71,13 @@ export interface BraftEditorProps {
   onTab?: Function;
   onDelete?: Function;
   onSave?: Function;
+  onFullscreen?: Function;
+  handlePastedFiles?: Function;
+  handleDroppedFiles?: Function;
+  handlePastedText?: Function;
+  handleBeforeInput?: Function;
+  handleReturn?: Function;
+  handleKeyCommand?: Function;
 }
 
 export default class BraftEditor extends React.Component<BraftEditorProps> {
@@ -133,6 +146,7 @@ export type ExtendControlType =
   html?: string | null;
   text?: string | React.ReactNode;
   onClick?: Function;
+  disabled?: boolean;
 }
   | {
   key: string;
@@ -145,6 +159,7 @@ export type ExtendControlType =
   arrowActive?: boolean;
   autoHide?: boolean;
   component: React.ReactNode;
+  disabled?: boolean;
 }
   | {
   key: string;
@@ -154,6 +169,7 @@ export type ExtendControlType =
   html?: string | null;
   text?: string | React.ReactNode;
   onClick?: Function;
+  disabled?: boolean;
   modal: {
     id: string;
     title?: string;
@@ -263,6 +279,11 @@ export type HooksType = {
   ['remove-medias']?: HookFunc,
   ['insert-medias']?: HookFunc,
   ['select-files']?: HookFunc,
+  ['set-image-link-target']?: HookFunc,
+  ['set-image-link']?: HookFunc,
+  ['set-image-size']?: HookFunc,
+  ['set-image-float']?: HookFunc,
+  ['set-image-alignment']?: HookFunc,
 };
 
 export type HookFunc = (any: any) => any;

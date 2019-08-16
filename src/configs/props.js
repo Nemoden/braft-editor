@@ -51,6 +51,7 @@ export default {
     'align-left', 'align-center', 'align-right',
     'link', 'size', 'remove'
   ],
+  imageResizable: true,
   colors: [
     '#000000', '#333333', '#666666', '#999999', '#cccccc', '#ffffff',
     '#61a951', '#16a085', '#07a9fe', '#003ba5', '#8e44ad', '#f32784',
@@ -63,6 +64,7 @@ export default {
   headings: ['header-one', 'header-two', 'header-three', 'header-four', 'header-five', 'header-six', 'unstyled'],
   textAligns: ['left', 'center', 'right', 'justify'],
   textBackgroundColor: true,
+  allowInsertLinkText: false,
   defaultLinkTarget: '',
   letterSpacings: [0, 1, 2, 3, 4, 5, 6],
   lineHeights: [1, 1.2, 1.5, 1.75, 2, 2.5, 3, 4],

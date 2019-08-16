@@ -1,5 +1,22 @@
 ### 历史更新记录
 
+- 2019-06-20 v2.3.7
+  - 修复问题[#542](https://github.com/margox/braft-editor/issues/542)、[#541](https://github.com/margox/braft-editor/issues/541)、[#467](https://github.com/margox/braft-editor/issues/467)
+  - 修复问题[#512](https://github.com/margox/braft-editor/issues/512)并新增imageResizable属性，允许关闭图片的拖动调整尺寸功能
+- 2019-06-18 v2.3.6
+  - 支持不选择文字的情况下直接插入链接
+  - 新增`allowInsertLinkText`属性，允许直接插入链接时输入链接文字，默认`false`
+- 2019-06-14 v2.3.5
+  - 完善index.d.ts
+- 2019-06-11 v2.3.4
+  - 支持部分更多自定义html属性的保留(需要升级braft-convert至v2.3.0)
+  - 加入韩语(kr)、日语(jpn)、土耳其语(tr)
+  - 加入更多[hooks](https://www.yuque.com/braft-editor/be/gz44tn#gug9gs)支持
+- 2019-06-11 v2.3.3
+  - 支持部分更多自定义html属性的保留(需要升级braft-convert至v2.1.13)
+  - 加入更多[hooks](https://www.yuque.com/braft-editor/be/gz44tn#gug9gs)支持
+- 2019-05-28 v2.3.2
+  - 修复传入RAW字符串无法正常解析为问题
 - 2019-05-20 v2.3.1
   - 修复v2.3.0的致命bug
 - 2019-05-20 v2.3.0

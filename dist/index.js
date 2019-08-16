@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react"), require("braft-utils"), require("draft-js"), require("immutable"), require("braft-convert"), require("react-dom"), require("braft-finder"), require("draftjs-utils")) : factory(root["react"], root["braft-utils"], root["draft-js"], root["immutable"], root["braft-convert"], root["react-dom"], root["braft-finder"], root["draftjs-utils"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(window, function(__WEBPACK_EXTERNAL_MODULE__0__, __WEBPACK_EXTERNAL_MODULE__3__, __WEBPACK_EXTERNAL_MODULE__5__, __WEBPACK_EXTERNAL_MODULE__13__, __WEBPACK_EXTERNAL_MODULE__14__, __WEBPACK_EXTERNAL_MODULE__16__, __WEBPACK_EXTERNAL_MODULE__17__, __WEBPACK_EXTERNAL_MODULE__23__) {
+})(window, function(__WEBPACK_EXTERNAL_MODULE__0__, __WEBPACK_EXTERNAL_MODULE__3__, __WEBPACK_EXTERNAL_MODULE__6__, __WEBPACK_EXTERNAL_MODULE__13__, __WEBPACK_EXTERNAL_MODULE__14__, __WEBPACK_EXTERNAL_MODULE__16__, __WEBPACK_EXTERNAL_MODULE__17__, __WEBPACK_EXTERNAL_MODULE__23__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -143,6 +143,18 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__3__;
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+module.exports = _classCallCheck;
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var defineProperty = __webpack_require__(2);
@@ -169,22 +181,10 @@ function _objectSpread(target) {
 module.exports = _objectSpread;
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__5__;
-
-/***/ }),
 /* 6 */
 /***/ (function(module, exports) {
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
+module.exports = __WEBPACK_EXTERNAL_MODULE__6__;
 
 /***/ }),
 /* 7 */
@@ -1372,7 +1372,7 @@ var helpers_typeof = __webpack_require__(15);
 var typeof_default = /*#__PURE__*/__webpack_require__.n(helpers_typeof);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/objectSpread.js
-var objectSpread = __webpack_require__(4);
+var objectSpread = __webpack_require__(5);
 var objectSpread_default = /*#__PURE__*/__webpack_require__.n(objectSpread);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/objectWithoutProperties.js
@@ -1380,7 +1380,7 @@ var objectWithoutProperties = __webpack_require__(21);
 var objectWithoutProperties_default = /*#__PURE__*/__webpack_require__.n(objectWithoutProperties);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/classCallCheck.js
-var classCallCheck = __webpack_require__(6);
+var classCallCheck = __webpack_require__(4);
 var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/createClass.js
@@ -1477,7 +1477,8 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
     exitFullscreen: 'Exit Fullscreen'
   },
   linkEditor: {
-    inputPlaceHolder: 'Input link URL',
+    textInputPlaceHolder: 'Input link text',
+    linkInputPlaceHolder: 'Input link URL',
     inputWithEnterPlaceHolder: 'Input link URL and press Enter',
     openInNewWindow: 'Open in new window',
     removeLink: 'Remove Link'
@@ -1553,7 +1554,8 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
     exitFullscreen: '退出全屏'
   },
   linkEditor: {
-    inputPlaceHolder: '输入链接地址',
+    textInputPlaceHolder: '输入链接文字',
+    linkInputPlaceHolder: '输入链接地址',
     inputWithEnterPlaceHolder: '输入链接地址并回车',
     openInNewWindow: '在新窗口打开',
     removeLink: '移除链接'
@@ -1629,7 +1631,8 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
     exitFullscreen: '退出全熒幕'
   },
   linkEditor: {
-    inputPlaceHolder: '輸入鏈接地址',
+    textInputPlaceHolder: '輸入鏈接文字',
+    linkInputPlaceHolder: '輸入鏈接地址',
     inputWithEnterPlaceHolder: '輸入鏈接地址並回車',
     openInNewWindow: '在新窗口打開',
     removeLink: '移除鏈接'
@@ -1702,7 +1705,8 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
     emoji: 'Emoji'
   },
   linkEditor: {
-    inputPlaceHolder: 'Adres URL',
+    textInputPlaceHolder: 'Wpisz tekst linku',
+    linkInputPlaceHolder: 'Wpisz Adres URL',
     inputWithEnterPlaceHolder: 'Wpisz adres URL i naciśnij Enter',
     openInNewWindow: 'Otwórz w nowym oknie',
     removeLink: 'Usuń link'
@@ -1778,7 +1782,8 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
     exitFullscreen: '전체화면종료'
   },
   linkEditor: {
-    inputPlaceHolder: '링크주소입력',
+    textInputPlaceHolder: '링크텍스트입력',
+    linkInputPlaceHolder: '링크주소입력',
     inputWithEnterPlaceHolder: '링크주소입력.',
     openInNewWindow: '새창열기',
     removeLink: '링크삭제'
@@ -1795,6 +1800,82 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
     video: '비디오',
     audio: '오디오',
     embed: '임베디드미디어'
+  }
+});
+// CONCATENATED MODULE: ./languages/tr.js
+/* harmony default export */ var tr = ({
+  base: {
+    remove: 'Kaldır',
+    cancel: 'İptal',
+    confirm: 'Onayla',
+    inert: 'Ekle',
+    width: 'Genişlik',
+    height: 'Yükseklik'
+  },
+  controls: {
+    clear: 'Temizle',
+    undo: 'Geri al',
+    redo: 'İleri al',
+    fontSize: 'Yazı boyutu',
+    color: 'Renk',
+    textColor: 'Yazı rengi',
+    tempColors: 'Geçici renkler',
+    backgroundColor: 'Arkaplan',
+    bold: 'Kalın',
+    lineHeight: 'Satır yüksekliği',
+    letterSpacing: 'Harf aralığı',
+    textIndent: 'Çentik aralığı',
+    increaseIndent: 'Çentiği genişlet',
+    decreaseIndent: 'Çentiği daralt',
+    italic: 'Eğik',
+    underline: 'Altı çizili',
+    strikeThrough: 'Üstü çizili',
+    fontFamily: 'Yazı tipi',
+    textAlign: 'Metin Hizalama',
+    alignLeft: 'Sola hizala',
+    alignCenter: 'Ortaya hizala',
+    alignRight: 'Sağa hizala',
+    alignJustify: 'Her iki tarafa hizala',
+    floatLeft: 'Sola yatır',
+    floatRight: 'Sağa yatır',
+    superScript: 'Ana kod',
+    subScript: 'Alt kod',
+    removeStyles: 'Stilleri kaldır',
+    headings: 'Başlıklar',
+    header: 'Başlık',
+    normal: 'Normal',
+    orderedList: 'Sıralı liste',
+    unorderedList: 'Sırasız liste',
+    blockQuote: 'Alıntı',
+    code: 'Kod',
+    link: 'Bağlantı',
+    unlink: 'Bağlantıyı kaldır',
+    hr: 'Yatay çizgi',
+    media: 'Medya',
+    mediaLibirary: 'Kütüphane',
+    emoji: 'İfade',
+    fullscreen: 'Tam ekran',
+    exitFullscreen: 'Tam ekrandan çık'
+  },
+  linkEditor: {
+    textInputPlaceHolder: 'Bağlantı metnini girin',
+    linkInputPlaceHolder: 'Bağlantı URL\' si girin',
+    inputWithEnterPlaceHolder: 'Bağlantı URL\'si girin ve Enter\' a basın',
+    openInNewWindow: 'Yeni pencerede aç',
+    removeLink: 'Bağlantıyı kaldır'
+  },
+  audioPlayer: {
+    title: 'Ses çal'
+  },
+  videoPlayer: {
+    title: 'Görüntü oynat',
+    embedTitle: 'Görüntüyü göm'
+  },
+  media: {
+    image: 'Resim',
+    video: 'Görüntü',
+    audio: 'Ses',
+    embed: 'Gömülü nesne'
   }
 });
 // CONCATENATED MODULE: ./languages/jpn.js
@@ -1854,7 +1935,8 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
     exitFullscreen: '全画面を退く'
   },
   linkEditor: {
-    inputPlaceHolder: 'リンクアドレスを入力',
+    textInputPlaceHolder: 'リンクテキストを入力',
+    linkInputPlaceHolder: 'リンクアドレスを入力',
     inputWithEnterPlaceHolder: 'リンクアドレスを入力して戻ります',
     openInNewWindow: '新しいウィンドウで開く',
     removeLink: '新しいウィンドウで開く'
@@ -1873,7 +1955,85 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
     embed: '埋め込みメディア'
   }
 });
+// CONCATENATED MODULE: ./languages/ru.js
+/* harmony default export */ var ru = ({
+  base: {
+    remove: 'Удалить',
+    cancel: 'Отмена',
+    confirm: 'Подтвердить',
+    insert: 'Вставить',
+    width: 'Ширина',
+    height: 'Высота'
+  },
+  controls: {
+    clear: 'Очистить',
+    undo: 'Отменить',
+    redo: 'Повторить',
+    fontSize: 'Размер шрифта',
+    color: 'Цвет',
+    textColor: 'Цвет текста',
+    tempColors: 'Temp Colors',
+    backgroundColor: 'Цвет фона',
+    bold: 'Жирный',
+    lineHeight: 'Межстрочный интервал',
+    letterSpacing: 'Межбуквенный интервал',
+    textIndent: 'Отступ',
+    increaseIndent: 'Увеличить отступ',
+    decreaseIndent: 'Уменьшить отступ',
+    italic: 'Курсив',
+    underline: 'Подчеркнутый',
+    strikeThrough: 'Перечеркнутый',
+    fontFamily: 'Шрифт',
+    textAlign: 'Расположение текста',
+    alignLeft: 'По левому краю',
+    alignCenter: 'По центру',
+    alignRight: 'По правому краю',
+    alignJustify: 'По ширине',
+    floatLeft: 'Обтекание слева',
+    floatRight: 'Обтекание справа',
+    superScript: 'Надстрочный индекс',
+    subScript: 'Подстрочный индекс',
+    removeStyles: 'Убрать стили',
+    headings: 'Заголовки',
+    header: 'Заголовок',
+    normal: 'Обычный',
+    orderedList: 'Упорядоченный список',
+    unorderedList: 'Неупорядоченный список',
+    blockQuote: 'Цитата',
+    code: 'Код',
+    link: 'Вставить ссылку',
+    unlink: 'Убрать ссылку',
+    hr: 'Горизонтальная линия',
+    media: 'Медиа',
+    mediaLibirary: 'Медиа библиотека',
+    emoji: 'Emoji',
+    fullscreen: 'Полноэкранный режим',
+    exitFullscreen: 'Выйти из полноэкранного режима'
+  },
+  linkEditor: {
+    textInputPlaceHolder: 'Введите текст ссылки',
+    linkInputPlaceHolder: 'Вставить ссылку',
+    inputWithEnterPlaceHolder: 'Вставить ссылку и нажать Enter',
+    openInNewWindow: 'Открыть в новом окне',
+    removeLink: 'Убрать ссылку'
+  },
+  audioPlayer: {
+    title: 'Воспроизвести аудиофайл'
+  },
+  videoPlayer: {
+    title: 'Воспроизвести видеофайл',
+    embedTitle: 'Embed Media'
+  },
+  media: {
+    image: 'Картинка',
+    video: 'Видео',
+    audio: 'Аудио',
+    embed: 'Встроенное'
+  }
+});
 // CONCATENATED MODULE: ./languages/index.js
+
+
 
 
 
@@ -1886,7 +2046,9 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
   'zh-hant': zh_hant,
   'pl': pl,
   'kr': kr,
-  'jpn': jpn
+  'tr': tr,
+  'jpn': jpn,
+  'ru': ru
 });
 // EXTERNAL MODULE: external "braft-finder"
 var external_braft_finder_ = __webpack_require__(17);
@@ -1896,7 +2058,7 @@ var external_braft_finder_default = /*#__PURE__*/__webpack_require__.n(external_
 var external_braft_utils_ = __webpack_require__(3);
 
 // EXTERNAL MODULE: external "draft-js"
-var external_draft_js_ = __webpack_require__(5);
+var external_draft_js_ = __webpack_require__(6);
 
 // EXTERNAL MODULE: external "immutable"
 var external_immutable_ = __webpack_require__(13);
@@ -1959,6 +2121,7 @@ var external_immutable_default = /*#__PURE__*/__webpack_require__.n(external_imm
     }
   },
   imageControls: ['float-left', 'float-right', 'align-left', 'align-center', 'align-right', 'link', 'size', 'remove'],
+  imageResizable: true,
   colors: ['#000000', '#333333', '#666666', '#999999', '#cccccc', '#ffffff', '#61a951', '#16a085', '#07a9fe', '#003ba5', '#8e44ad', '#f32784', '#c0392b', '#d35400', '#f39c12', '#fdda00'],
   colorPicker: null,
   colorPickerTheme: 'dark',
@@ -1967,6 +2130,7 @@ var external_immutable_default = /*#__PURE__*/__webpack_require__.n(external_imm
   headings: ['header-one', 'header-two', 'header-three', 'header-four', 'header-five', 'header-six', 'unstyled'],
   textAligns: ['left', 'center', 'right', 'justify'],
   textBackgroundColor: true,
+  allowInsertLinkText: false,
   defaultLinkTarget: '',
   letterSpacings: [0, 1, 2, 3, 4, 5, 6],
   lineHeights: [1, 1.2, 1.5, 1.75, 2, 2.5, 3, 4],
@@ -3019,10 +3183,7 @@ function (_React$Component) {
         _this.initialWidth = imageRect.width;
         _this.initialHeight = imageRect.height;
         e.preventDefault();
-
-        var that = assertThisInitialized_default()(assertThisInitialized_default()(_this));
-
-        document.addEventListener('mousemove', that.moveImage);
+        document.addEventListener('mousemove', _this.moveImage);
         document.addEventListener('mouseup', _this.upImage);
       };
     });
@@ -3110,6 +3271,16 @@ function (_React$Component) {
     defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "confirmImageLink", function () {
       var link = _this.state.tempLink;
 
+      var hookReturns = _this.props.hooks('set-image-link', link)(link);
+
+      if (hookReturns === false) {
+        return false;
+      }
+
+      if (typeof hookReturns === 'string') {
+        link = hookReturns;
+      }
+
       if (link !== null) {
         _this.props.editor.setValue(external_braft_utils_["ContentUtils"].setMediaData(_this.props.editor.getValue(), _this.props.entityKey, {
           link: link
@@ -3159,12 +3330,32 @@ function (_React$Component) {
       width !== null && (newImageSize.width = width);
       height !== null && (newImageSize.height = height);
 
+      var hookReturns = _this.props.hooks('set-image-size', newImageSize)(newImageSize);
+
+      if (hookReturns === false) {
+        return false;
+      }
+
+      if (hookReturns && (hookReturns.width || hookReturns.height)) {
+        newImageSize = hookReturns;
+      }
+
       _this.props.editor.setValue(external_braft_utils_["ContentUtils"].setMediaData(_this.props.editor.getValue(), _this.props.entityKey, newImageSize));
 
       window.setImmediate(_this.props.editor.forceRender);
     });
 
     defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "setImageFloat", function (float) {
+      var hookReturns = _this.props.hooks('set-image-float', float)(float);
+
+      if (hookReturns === false) {
+        return false;
+      }
+
+      if (typeof hookReturns === 'string') {
+        float = hookReturns;
+      }
+
       _this.props.editor.setValue(external_braft_utils_["ContentUtils"].setMediaPosition(_this.props.editor.getValue(), _this.props.block, {
         float: float
       }));
@@ -3173,6 +3364,16 @@ function (_React$Component) {
     });
 
     defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "setImageAlignment", function (alignment) {
+      var hookReturns = _this.props.hooks('set-image-alignment', alignment)(alignment);
+
+      if (hookReturns === false) {
+        return false;
+      }
+
+      if (typeof hookReturns === 'string') {
+        alignment = hookReturns;
+      }
+
       _this.props.editor.setValue(external_braft_utils_["ContentUtils"].setMediaPosition(_this.props.editor.getValue(), _this.props.block, {
         alignment: alignment
       }));
@@ -3223,7 +3424,8 @@ function (_React$Component) {
       var _this$props = this.props,
           mediaData = _this$props.mediaData,
           language = _this$props.language,
-          imageControls = _this$props.imageControls;
+          imageControls = _this$props.imageControls,
+          imageResizable = _this$props.imageResizable;
       var _this$state2 = this.state,
           toolbarVisible = _this$state2.toolbarVisible,
           toolbarOffset = _this$state2.toolbarOffset,
@@ -3364,19 +3566,19 @@ function (_React$Component) {
         src: url,
         width: width,
         height: height
-      }, meta)), toolbarVisible && external_react_default.a.createElement("div", {
+      }, meta)), toolbarVisible && imageResizable ? external_react_default.a.createElement("div", {
         className: "bf-csize-icon right-bottom",
         onMouseDown: this.repareChangeSize('rightbottom')
-      }), toolbarVisible && external_react_default.a.createElement("div", {
+      }) : null, toolbarVisible && imageResizable ? external_react_default.a.createElement("div", {
         className: "bf-csize-icon left-bottom",
         onMouseDown: this.repareChangeSize('leftbottom')
-      }), external_react_default.a.createElement("div", {
+      }) : null, imageResizable ? external_react_default.a.createElement("div", {
         className: "bf-pre-csize ".concat(this.reSizeType),
         style: {
           width: "".concat(tempWidth, "px"),
           height: "".concat(tempHeight, "px")
         }
-      }))), clearFix && external_react_default.a.createElement("div", {
+      }) : null)), clearFix && external_react_default.a.createElement("div", {
         className: "clearfix",
         style: {
           clear: 'both',
@@ -3425,6 +3627,16 @@ function (_React$Component) {
   }, {
     key: "setImageLinkTarget",
     value: function setImageLinkTarget(link_target) {
+      var hookReturns = this.props.hooks('set-image-link-target', link_target)(link_target);
+
+      if (hookReturns === false) {
+        return false;
+      }
+
+      if (typeof hookReturns === 'string') {
+        link_target = hookReturns;
+      }
+
       link_target = link_target === '_blank' ? '' : '_blank';
       this.props.editor.setValue(external_braft_utils_["ContentUtils"].setMediaData(this.props.editor.getValue(), this.props.entityKey, {
         link_target: link_target
@@ -4028,8 +4240,25 @@ function (_React$Component) {
 
 
 
-var blockRendererFn_getAtomicBlockComponent = function getAtomicBlockComponent(superProps) {
-  return function (props) {
+
+
+var blockRendererFn_BlockRenderFnContext = function BlockRenderFnContext() {
+  var _this = this;
+
+  classCallCheck_default()(this, BlockRenderFnContext);
+
+  defineProperty_default()(this, "superProps", void 0);
+
+  defineProperty_default()(this, "customBlockRendererFn", void 0);
+
+  defineProperty_default()(this, "getRenderFn", function (superProps, customBlockRendererFn) {
+    _this.superProps = superProps;
+    _this.customBlockRendererFn = customBlockRendererFn;
+    return _this.blockRendererFn;
+  });
+
+  defineProperty_default()(this, "renderAtomicBlock", function (props) {
+    var superProps = _this.superProps;
     var entityKey = props.block.getEntityAt(0);
 
     if (!entityKey) {
@@ -4070,11 +4299,11 @@ var blockRendererFn_getAtomicBlockComponent = function getAtomicBlockComponent(s
     }
 
     return null;
-  };
-};
+  });
 
-/* harmony default export */ var block_blockRendererFn = (function (superProps, customBlockRendererFn) {
-  return function (block) {
+  defineProperty_default()(this, "blockRendererFn", function (block) {
+    var customBlockRendererFn = _this.customBlockRendererFn,
+        superProps = _this.superProps;
     var blockType = block.getType();
     var blockRenderer = null;
 
@@ -4100,14 +4329,17 @@ var blockRendererFn_getAtomicBlockComponent = function getAtomicBlockComponent(s
 
     if (blockType === 'atomic') {
       blockRenderer = {
-        component: blockRendererFn_getAtomicBlockComponent(superProps),
+        component: _this.renderAtomicBlock,
         editable: false
       };
     }
 
     return blockRenderer;
-  };
-});
+  });
+};
+
+var blockRenderFnContext = new blockRendererFn_BlockRenderFnContext();
+/* harmony default export */ var block_blockRendererFn = (blockRenderFnContext.getRenderFn);
 // CONCATENATED MODULE: ./renderers/block/blockStyleFn.js
 /* harmony default export */ var block_blockStyleFn = (function (customBlockStyleFn) {
   return function (block) {
@@ -4595,7 +4827,13 @@ function (_React$Component) {
       }
     });
 
-    defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "inputLink", function (e) {
+    defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "handleTnputText", function (e) {
+      _this.setState({
+        text: e.currentTarget.value
+      });
+    });
+
+    defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "handleInputLink", function (e) {
       _this.setState({
         href: e.currentTarget.value
       });
@@ -4619,8 +4857,10 @@ function (_React$Component) {
 
     defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "handleConfirm", function () {
       var _this$state = _this.state,
+          text = _this$state.text,
           href = _this$state.href,
-          target = _this$state.target;
+          target = _this$state.target,
+          textSelected = _this$state.textSelected;
 
       var hookReturns = _this.props.hooks('toggle-link', {
         href: href,
@@ -4643,12 +4883,28 @@ function (_React$Component) {
         typeof hookReturns.target === 'string' && (target = hookReturns.target);
       }
 
-      _this.props.editor.setValue(external_braft_utils_["ContentUtils"].toggleSelectionLink(_this.props.editorState, href, target));
+      if (textSelected) {
+        if (href) {
+          _this.props.editor.setValue(external_braft_utils_["ContentUtils"].toggleSelectionLink(_this.props.editorState, href, target));
+        } else {
+          _this.props.editor.setValue(external_braft_utils_["ContentUtils"].toggleSelectionLink(_this.props.editorState, false));
+        }
+      } else {
+        _this.props.editor.setValue(external_braft_utils_["ContentUtils"].insertText(_this.props.editorState, text || href, null, {
+          type: 'LINK',
+          data: {
+            href: href,
+            target: target
+          }
+        }));
+      }
     });
 
     _this.state = {
+      text: '',
       href: '',
-      target: props.defaultLinkTarget || ''
+      target: props.defaultLinkTarget || '',
+      textSelected: false
     };
     return _this;
   }
@@ -4660,7 +4916,16 @@ function (_React$Component) {
           href = _ContentUtils$getSele.href,
           target = _ContentUtils$getSele.target;
 
+      var textSelected = !external_braft_utils_["ContentUtils"].isSelectionCollapsed(this.props.editorState) && external_braft_utils_["ContentUtils"].getSelectionBlockType(this.props.editorState) !== 'atomic';
+      var selectedText = '';
+
+      if (textSelected) {
+        selectedText = external_braft_utils_["ContentUtils"].getSelectionText(this.props.editorState);
+      }
+
       this.setState({
+        textSelected: textSelected,
+        text: selectedText,
         href: href || '',
         target: typeof target === 'undefined' ? nextProps.defaultLinkTarget || '' : target || ''
       });
@@ -4670,13 +4935,15 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
+      var allowInsertLinkText = this.props.allowInsertLinkText;
       var _this$state2 = this.state,
+          text = _this$state2.text,
           href = _this$state2.href,
-          target = _this$state2.target;
+          target = _this$state2.target,
+          textSelected = _this$state2.textSelected;
       var caption = external_react_default.a.createElement("i", {
         className: "bfi-link"
       });
-      var textSelected = !external_braft_utils_["ContentUtils"].isSelectionCollapsed(this.props.editorState) && external_braft_utils_["ContentUtils"].getSelectionBlockType(this.props.editorState) !== 'atomic';
       return external_react_default.a.createElement(ControlGroup, null, external_react_default.a.createElement(DropDown_DropDown, {
         key: 0,
         caption: caption,
@@ -4684,22 +4951,31 @@ function (_React$Component) {
         autoHide: true,
         getContainerNode: this.props.getContainerNode,
         showArrow: false,
-        disabled: !textSelected,
         ref: function ref(instance) {
           return _this2.dropDownInstance = instance;
         },
         className: 'control-item dropdown link-editor-dropdown'
       }, external_react_default.a.createElement("div", {
         className: "bf-link-editor"
-      }, external_react_default.a.createElement("div", {
+      }, allowInsertLinkText ? external_react_default.a.createElement("div", {
+        className: "input-group"
+      }, external_react_default.a.createElement("input", {
+        type: "text",
+        value: text,
+        spellCheck: false,
+        disabled: textSelected,
+        placeholder: this.props.language.linkEditor.textInputPlaceHolder,
+        onKeyDown: this.handeKeyDown,
+        onChange: this.handleTnputText
+      })) : null, external_react_default.a.createElement("div", {
         className: "input-group"
       }, external_react_default.a.createElement("input", {
         type: "text",
         value: href,
         spellCheck: false,
-        placeholder: this.props.language.linkEditor.inputPlaceHolder,
+        placeholder: this.props.language.linkEditor.linkInputPlaceHolder,
         onKeyDown: this.handeKeyDown,
-        onChange: this.inputLink
+        onChange: this.handleInputLink
       })), external_react_default.a.createElement("div", {
         className: "switch-group"
       }, external_react_default.a.createElement(Switch, {
@@ -5709,6 +5985,7 @@ function (_React$Component) {
           letterSpacings = _this$props.letterSpacings,
           textAligns = _this$props.textAligns,
           textBackgroundColor = _this$props.textBackgroundColor,
+          allowInsertLinkText = _this$props.allowInsertLinkText,
           defaultLinkTarget = _this$props.defaultLinkTarget;
       var currentBlockType = external_braft_utils_["ContentUtils"].getSelectionBlockType(editorState);
       var commonProps = {
@@ -5816,7 +6093,8 @@ function (_React$Component) {
         } else if (controlItem.type === 'link') {
           return external_react_default.a.createElement(LinkEditor_LinkEditor, extends_default()({
             key: index,
-            defaultLinkTarget: defaultLinkTarget
+            defaultLinkTarget: defaultLinkTarget,
+            allowInsertLinkText: allowInsertLinkText
           }, commonProps));
         } else if (controlItem.type === 'text-align') {
           return external_react_default.a.createElement(TextAlign_TextAlign, extends_default()({
@@ -5976,7 +6254,9 @@ var buildHooks = function buildHooks(hooks) {
 
 var filterColors = function filterColors(colors, colors2) {
   return colors.filter(function (item) {
-    return colors2.indexOf(item) === -1;
+    return !colors2.find(function (color) {
+      return color.toLowerCase() === item.toLowerCase();
+    });
   }).filter(function (item, index, array) {
     return array.indexOf(item) === index;
   });
@@ -6337,10 +6617,12 @@ function (_React$Component) {
           fixPlaceholder = _this$editorProps3.fixPlaceholder,
           headings = _this$editorProps3.headings,
           imageControls = _this$editorProps3.imageControls,
+          imageResizable = _this$editorProps3.imageResizable,
           lineHeights = _this$editorProps3.lineHeights,
           letterSpacings = _this$editorProps3.letterSpacings,
           textAligns = _this$editorProps3.textAligns,
           textBackgroundColor = _this$editorProps3.textBackgroundColor,
+          allowInsertLinkText = _this$editorProps3.allowInsertLinkText,
           defaultLinkTarget = _this$editorProps3.defaultLinkTarget,
           extendAtomics = _this$editorProps3.extendAtomics,
           className = _this$editorProps3.className,
@@ -6402,6 +6684,7 @@ function (_React$Component) {
         letterSpacings: letterSpacings,
         textAligns: textAligns,
         textBackgroundColor: textBackgroundColor,
+        allowInsertLinkText: allowInsertLinkText,
         defaultLinkTarget: defaultLinkTarget
       };
       var unitExportFn = editorState.convertOptions.unitExportFn;
@@ -6412,6 +6695,7 @@ function (_React$Component) {
         editorState: editorState,
         containerNode: this.containerNode,
         imageControls: imageControls,
+        imageResizable: imageResizable,
         language: language,
         extendAtomics: extendAtomics
       };
@@ -6464,11 +6748,11 @@ function (_React$Component) {
       return external_react_default.a.createElement("div", {
         style: style,
         ref: this.setEditorContainerNode,
-        className: "bf-container ".concat(className).concat(disabled ? ' disabled' : '').concat(readOnly ? ' read-only' : '').concat(isFullscreen ? ' fullscreen' : ''),
-        onCopy: this.handleCopyContent
+        className: "bf-container ".concat(className).concat(disabled ? ' disabled' : '').concat(readOnly ? ' read-only' : '').concat(isFullscreen ? ' fullscreen' : '')
       }, external_react_default.a.createElement(ControlBar_ControlBar, controlBarProps), componentBelowControlBar, external_react_default.a.createElement("div", {
         onCompositionStart: this.handleCompositionStart,
         className: "bf-content ".concat(contentClassName),
+        onCopy: this.handleCopyContent,
         style: contentStyle
       }, external_react_default.a.createElement(external_draft_js_["Editor"], draftProps)));
     }
@@ -6531,7 +6815,7 @@ editor_BraftEditor.createEditorState = external_draft_js_["EditorState"].createF
     editorState = Object(external_braft_convert_["convertRawToEditorState"])(content, getDecorators(options.editorId));
   } else if (typeof content === 'string') {
     try {
-      if (!/^(-)?\d{1,15}$/.test(content)) {
+      if (/^(-)?\d+$/.test(content)) {
         editorState = Object(external_braft_convert_["convertHTMLToEditorState"])(content, getDecorators(options.editorId), options, 'create');
       } else {
         editorState = external_draft_js_["EditorState"].createFrom(JSON.parse(content), options);
@@ -6540,7 +6824,7 @@ editor_BraftEditor.createEditorState = external_draft_js_["EditorState"].createF
       editorState = Object(external_braft_convert_["convertHTMLToEditorState"])(content, getDecorators(options.editorId), options, 'create');
     }
   } else if (typeof content === 'number') {
-    editorState = Object(external_braft_convert_["convertHTMLToEditorState"])("".concat(content), getDecorators(options.editorId), options, 'create');
+    editorState = Object(external_braft_convert_["convertHTMLToEditorState"])(content.toLocaleString().replace(/,/g, ''), getDecorators(options.editorId), options, 'create');
   } else {
     editorState = external_draft_js_["EditorState"].createEmpty(getDecorators(options.editorId));
   }

@@ -2,20 +2,32 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import BraftEditor from '../src'
 import ColorPicker from 'braft-extensions/dist/color-picker'
+import Table from 'braft-extensions/dist/table'
+import CodeHighlighter from 'braft-extensions/dist/code-highlighter'
 import Emoticon, { defaultEmoticons } from 'braft-extensions/dist/emoticon'
 
 import 'braft-extensions/dist/emoticon.css'
 import 'braft-extensions/dist/color-picker.css'
+import 'braft-extensions/dist/table.css'
+import 'braft-extensions/dist/code-highlighter.css'
 
 const emoticons = defaultEmoticons.map(item => require(`braft-extensions/dist/assets/${item}`))
+
+const hooks = {
+  'set-image-alignment': () => {
+    return 'left'
+  }
+}
 
 BraftEditor.use([
   Emoticon({
     emoticons: emoticons
   }),
-  ColorPicker({
-    theme: 'dark'
-  })
+  // ColorPicker({
+  //   theme: 'dark'
+  // }),
+  Table(),
+  CodeHighlighter()
 ])
 
 class Demo extends React.Component {
@@ -27,7 +39,7 @@ class Demo extends React.Component {
     this.state = {
       count: 0,
       readOnly: false,
-      editorState: BraftEditor.createEditorState(123123131231231231)
+      editorState: BraftEditor.createEditorState('<p data-foo="adasd" class="my-classname"><img src="https://www.baidu.com/img/bd_logo1.png?where=super" /><span style="color:#e25041;">asdasdasda</span>asdads</p>')
     }
 
   }
@@ -84,31 +96,17 @@ class Demo extends React.Component {
               // disabled: true,
               component: <h1>Hello World!</h1>
             }]}
+            colors={['#e25041']}
             headings={['header-one', 'unstyled']}
             placeholder="Hello World!"
             fixPlaceholder={true}
-            media={{
-              items: [
-                {
-                  id: 'embed_1',
-                  type: 'VIDEO',
-                  name: '优酷视频',
-                  meta: {
-                    poster: 'https://margox.cn/wp-content/uploads/2018/09/IMG_9508.jpg'
-                  },
-                  url: `<embed src='http://player.youku.com/player.php/sid/XNDAwNDIxODg4OA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>`
-                }, {
-                  id: 'audio_1',
-                  type: 'AUDIO',
-                  name: '才华有限公司',
-                  url: 'http://cloudary-1253638848.cossh.myqcloud.com/%E9%87%91%E7%8E%9F%E5%B2%90%20-%20%E6%89%8D%E5%8D%8E%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8.mp3'
-                }
-              ]
-            }}
+            allowInsertLinkText={true}
             triggerChangeOnMount={false}
             value={editorState}
             onChange={this.handleChange}
             readOnly={readOnly}
+            hooks={hooks}
+            imageResizable={false}
           />
         </div>
       </div>
